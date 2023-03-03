@@ -1,0 +1,42 @@
+nstall nodejs
+install mongodb
+
+npm init
+
+ npm install --save express
+ npm install --save mongodb mongoose
+ npm install --save-dev babel-cli babel-preset-env
+ 
+ Creer un fichier au plus haut niveau : .babelrc contenu 
+ {
+    "presets": [
+        "env"
+    ]
+}
+ 
+npm install --save nodemon body-parser
+
+dans package.json créer le script :
+  "start": "nodemon ./index.js --exec babel-node -e js"
+
+Créer le serveur (index.js)
+  import express from 'express'
+
+const app = express();
+const PORT = 3000;
+
+app.get( '/', ( req, res ) => {
+    res.send( `Serveyr node et express sur port $(PORT')`
+} )
+
+app.listen( PORT, () =>
+    console.log( `Serveur sur port ${PORT}` )
+)
+
+créerla structure de dossiers (src /...)
+
+midleware fct ebtre request et reponse
+
+
+
+//Validation de schema : joi
